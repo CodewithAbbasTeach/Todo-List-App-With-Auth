@@ -1,22 +1,24 @@
-const mongoose=require("mongoose");
+const mongoose = require("mongoose"); // Import Mongoose to work with MongoDB
 
-const listSchema=new mongoose.Schema({
-    title: {
-        type: String,
-        require: true,
+// Define the schema for the list
+const listSchema = new mongoose.Schema({
+    title: { // Title of the task
+        type: String, // Type must be a string
+        required: true, // Title is required
     },
-    body: {
-        type: String,
-        require: true,
+    body: { // Body or description of the task
+        type: String, // Type must be a string
+        required: true, // Body is required
     },
-    user:[
+    user: [ // Array to hold references to User(s)
         {
-            type: mongoose.Types.ObjectId,
-            ref: "User"
+            type: mongoose.Types.ObjectId, // Each entry is an ObjectId
+            ref: "User" // Reference to the User model
         },
     ],
-},
-{timestamps:true}
+}, 
+{ timestamps: true } // Automatically create 'createdAt' and 'updatedAt' fields
 );
 
-module.exports=mongoose.model("List", listSchema)
+// Export the List model based on the listSchema
+module.exports = mongoose.model("List", listSchema);
