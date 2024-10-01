@@ -47,3 +47,8 @@ module.exports.signin = async (req, res) => {
         res.status(400).json({ message: "User not found: " + error.message }); // Respond with an error if something goes wrong
     }
 };
+
+module.exports.getTask=async(req, res)=>{
+    const list=await list.find({user: req.params.id});
+    res.status(200).json({ list })
+};

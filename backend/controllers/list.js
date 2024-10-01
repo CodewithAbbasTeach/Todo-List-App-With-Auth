@@ -83,3 +83,15 @@ module.exports.deleteTask = async (req, res) => {
         res.status(500).json({ message: "Internal server error" }); // Respond with a 500 status for any unexpected errors
     }
 };
+// gettask
+module.exports.getTask=async(req, res)=>{
+    const list=await list.find({user: req.params.id}.sort({createdAt: -1}));
+    if(list.length!==0){
+        res.status(200).json({ list });
+    }
+    else{
+            res.status(400).json({message : "no task"})
+    }
+
+
+};
