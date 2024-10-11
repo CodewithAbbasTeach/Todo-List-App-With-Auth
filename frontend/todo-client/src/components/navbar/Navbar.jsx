@@ -14,22 +14,22 @@ const Navbar = () => {
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
 
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+          <a className="nav-link active my-2" aria-current="page" href="#">Home</a>
         </li>
 
-        <li className="nav-item mx-2">
+        <li className="nav-item my-2">
           <a className="nav-link active" aria-current="page" href="#">About us</a>
         </li>
        
-        <li className="nav-item mx-2">
+        <li className="nav-item my-2 mx-2">
           <a className="nav-link active btn-nav" aria-current="page" href="#">SignUp</a>
         </li>
 
-        <li className="nav-item mx-2">
+        <li className="nav-item my-2 mx-2">
           <a className="nav-link active btn-nav" aria-current="page" href="#">SignIn</a>
         </li>
 
-        <li className="nav-item mx-2">
+        <li className="nav-item my-2 mx-2">
           <a className="nav-link active btn-nav" aria-current="page" href="#">Logout</a>
         </li>
 
