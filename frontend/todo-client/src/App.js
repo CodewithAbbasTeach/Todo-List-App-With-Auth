@@ -5,7 +5,9 @@ import Footer from './footer/footer';
 import About from './about/About';
 import SignUp from './signup/SignUp';
 import SignIn from './signup/SignIn';
+import Todo from './todo/Todo';
 import {BrowserRouter as Router , Routes , Route, RouterProvider} from "react-router-dom"
+
 
 const App = () => {
   return (
@@ -15,8 +17,10 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={ <Home/>}/>
         <Route  path="/about" element={ <About/>}/>
+        <Route  path="/todo" element={ <Todo/>}/>
         <Route  path="/signup" element={ <SignUp/>}/>
         <Route  path="/signin" element={ <SignIn/>}/>
+   
       </Routes>
       <Footer/>
       </Router>
